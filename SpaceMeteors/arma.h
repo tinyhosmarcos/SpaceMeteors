@@ -1,0 +1,6 @@
+#ifndef ARMA_H_INCLUDED
+#define ARMA_H_INCLUDED
+
+
+
+#endif // ARMA_H_INCLUDED
