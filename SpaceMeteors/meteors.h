@@ -2,14 +2,18 @@
 #define METEORS_H_INCLUDED
 #include <SDL.h>
 #include <SDL_image.h>
-
-class meteors{
+#include "SDL_Create.h"
+#include <time.h>
+#include <stdlib.h>
+class meteors:public SDL_Create{
 private:
-    int position_x;
-    int position_y;
-    SDL_Surface* image_meteors;
-    SDL_Texture* texture_meteors;
-    SDL_Rect var_mov;
+    int velocidad;
+public:
+    meteors(){velocidad=0;};
+    meteors(const char* temp_file,SDL_Renderer* temp_renderer);
+    void frec_col();
+	void frec_velocidad();
+	void movimiento();
 };
 
 #endif // METEORS_H_INCLUDED

@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Test" />
+		<Option title="Space Meteors" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -20,6 +20,7 @@
 					<Add library="libSDL2main" />
 					<Add library="libSDL2" />
 					<Add library="libSDL2_image" />
+					<Add library="libSDL2_mixer" />
 					<Add directory="../deps/lib" />
 				</Linker>
 			</Target>
@@ -39,7 +40,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Asteroid_Belt.cpp" />
+		<Unit filename="Asteroid_Belt.h" />
 		<Unit filename="PICT.JPG" />
+		<Unit filename="SDL_Create.cpp" />
+		<Unit filename="SDL_Create.h" />
 		<Unit filename="arma.cpp" />
 		<Unit filename="arma.h" />
 		<Unit filename="gameboard.cpp" />

@@ -1,5 +1,10 @@
 #include "gameboard.h"
-
+gameboard::gameboard(){
+    Init_Video();
+    Init_Image();
+    Create_Windows();
+    Create_Map();
+};
 void gameboard::Init_Video(){
     SDL_Init(SDL_INIT_VIDEO);
 
@@ -17,7 +22,7 @@ void gameboard::Create_Windows(){
 }
 void gameboard::Create_Map(){
     renderer = SDL_CreateRenderer(windows, -1, 0);
-    image = IMG_Load("PICT.JPG");
+    image = IMG_Load("background.jpg");
     texture = SDL_CreateTextureFromSurface(renderer, image);
 
 }

@@ -2,6 +2,7 @@
 #define GAMEBOARD_H_INCLUDED
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_mixer.h>
 class gameboard{
 private:
     SDL_Window *windows;
@@ -11,6 +12,7 @@ private:
     SDL_Texture* texture;
     SDL_Texture* texture2;
 public:
+    gameboard();
     void Init_Video();
     void Init_Image();
     void Create_Windows();
