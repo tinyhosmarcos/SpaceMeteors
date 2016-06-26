@@ -3,6 +3,8 @@
 #include "meteors.h"
 #include <list>
 #include <SDL.h>
+#include "nave.h"
+#include "arma.h"
 using namespace std;
 class ASTEROID_BELT{
 private:
@@ -11,7 +13,7 @@ private:
 public:
     ASTEROID_BELT(int num_asteroids,SDL_Renderer* temp_render);
     void add_asteroid(int num_add_asteroids,SDL_Renderer* temp_render);
-    void init_rainy(SDL_Renderer* temp_renderer);
+    void init_rainy(SDL_Renderer* temp_renderer,nave &test_n);
 };
 
 

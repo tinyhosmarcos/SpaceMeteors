@@ -4,9 +4,10 @@
 #include "SDL_Create.h"
 
 class Weapons:public SDL_Create{
+private:
+    const char* file="bullet.png";
 public:
-    Weapons(){};
-    Weapons(const char* temp_file,SDL_Renderer* temp_renderer,int post_x,int post_y);
+    Weapons(SDL_Renderer* temp_renderer,int post_x,int post_y);
     void init_movement();
     bool eraser_shoot();
 };

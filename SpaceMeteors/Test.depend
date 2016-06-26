@@ -329,7 +329,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1466770792 source:c:\users\star5\documents\project\spacemeteors\spacemeteors\main.cpp
+1466783252 source:c:\users\star5\documents\project\spacemeteors\spacemeteors\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<sstream>
@@ -339,7 +339,6 @@
 	<iostream>
 	<sstream>
 	<list>
-	<ctime>
 
 1451764694 c:\users\star5\documents\project\spacemeteors\deps\include\sdl\sdl.h
 	"SDL_main.h"
@@ -675,7 +674,7 @@
 1466641019 source:c:\users\star5\documents\project\spacemeteors\spacemeteors\meteors.cpp
 	"meteors.h"
 
-1466775298 source:c:\users\star5\documents\project\spacemeteors\spacemeteors\nave.cpp
+1466783314 source:c:\users\star5\documents\project\spacemeteors\spacemeteors\nave.cpp
 	"nave.h"
 
 1466563710 c:\users\star5\documents\project\spacemeteors\spacemeteors\gameboard.h

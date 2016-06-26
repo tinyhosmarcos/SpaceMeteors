@@ -17,13 +17,15 @@ void SDL_Create::Set_position(char char_pos,int position_temp){
 int SDL_Create::Get_position(char char_pos){
     if(char_pos=='x') return position_x;
     if(char_pos=='y') return position_y;
+    if(char_pos=='l') return length;
+    if(char_pos=='w') return width;
 }
 
 void SDL_Create::proportions(int temp_width,int temp_length){
     this->width=temp_width;
     this->length=temp_length;
 }
-SDL_Rect* SDL_Create::movement(){
+SDL_Rect* SDL_Create::movemento(){
     var_mov={this->position_x,this->position_y,width,length};
     return &var_mov;
 }

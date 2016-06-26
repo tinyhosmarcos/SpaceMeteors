@@ -26,19 +26,28 @@ SDL_Rect* nave::movement(){
     this->var_mov={position_x,position_y,100,90};
     return &var_mov;
 }
-void nave::Shoot(SDL_Renderer* temp_render){
-    weapon.push_back(new Weapons("bullet.png",temp_render,position_x,position_y));
+void nave::shoot(SDL_Renderer* renderer){
+    Weapon.push_back(new Weapons(renderer,(this->position_x)+20,(this->position_y)-60));
 }
-void nave::delete_shoot(SDL_Renderer* temp_render){
-    for(counter_shoots=weapon.begin();counter_shoots!=weapon.end();++counter_shoots){
-
-        (*counter_shoots)->Set_position('y',(*counter_shoots)->Get_position('y')-1);
-        SDL_RenderCopy(temp_render,(*counter_shoots)->Get_Texture(),NULL, (*counter_shoots)->movement());
-        if(((*counter_shoots)->eraser_shoot())==true){
-
-            delete(*counter_shoots);
-
-            counter_shoots=weapon.erase(counter_shoots);
+void nave::shots_impact(SDL_Renderer* renderer){
+    int coord_temp;
+    for(num_shoot=Weapon.begin();num_shoot!=Weapon.end();++num_shoot){
+        coord_temp=(*num_shoot)->Get_position('y');
+        (*num_shoot)->Set_position('y',coord_temp-1);
+        if((*num_shoot)->eraser_shoot()==true ){
+            delete(*num_shoot);
+            num_shoot=Weapon.erase(num_shoot);
+            //delete_shoot(num_shoot);
         }
+        else{
+            SDL_RenderCopy(renderer,(*num_shoot)->Get_Texture(),NULL, (*num_shoot)->movemento());
+        }
+
     }
 }
+/*
+void nave::delete_shoot(list<Weapon*>::iterator &temp_num_shoot){
+    delete(*temp_num_shoot);
+    temp_num_shoot=Weapon.erase(temp_num_shoot);
+}
+*/

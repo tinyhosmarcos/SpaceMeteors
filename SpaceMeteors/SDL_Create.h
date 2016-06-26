@@ -16,7 +16,7 @@ public:
     void Set_Image(const char* file);
     void Create_Texture(SDL_Renderer* renderer);
     SDL_Texture* Get_Texture();
-    SDL_Rect* movement();
+    SDL_Rect* movemento();
     void proportions(int temp_width,int temp_length);
     void Set_position(char char_pos,int position_temp);
     int Get_position(char char_pos);
