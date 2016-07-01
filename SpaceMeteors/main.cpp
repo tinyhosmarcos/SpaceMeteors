@@ -4,8 +4,6 @@
 #include "gameboard.h"
 #include "nave.h"
 #include "Asteroid_Belt.h"
-#include <iostream>
-#include <list>
 using namespace std;
 int main(int argc,char* argv[]){
 
@@ -27,6 +25,7 @@ int main(int argc,char* argv[]){
 
          //finaliza control de teclas
         //renders
+        SDL_RenderClear(board.Get_Renderer());
         SDL_RenderCopy(board.Get_Renderer(), board.Get_Texture(), NULL, NULL);
         SDL_RenderCopy(board.Get_Renderer(), space.Get_Texture(), NULL,space.movement());
         //SDL_RenderCopy(board.Get_Renderer(), luna.Get_Texture(),NULL, luna.movement());
@@ -35,6 +34,7 @@ int main(int argc,char* argv[]){
         SDL_RenderPresent(board.Get_Renderer());
         //Renders
     }
+
     return 0;
 
 }

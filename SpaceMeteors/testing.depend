@@ -2,13 +2,15 @@
 1467344578 source:c:\users\star5\documents\project\testing\testing\arma.cpp
 	"arma.h"
 
-1467347514 source:c:\users\star5\documents\project\testing\testing\gameboard.cpp
+1467370124 source:c:\users\star5\documents\project\testing\testing\gameboard.cpp
 	"gameboard.h"
 
-1467347580 c:\users\star5\documents\project\testing\testing\gameboard.h
+1467370299 c:\users\star5\documents\project\testing\testing\gameboard.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<sstream>
 
 1451764694 c:\users\star5\documents\project\testing\deps\include\sdl\sdl.h
 	"SDL_main.h"
@@ -344,17 +346,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1467347212 source:c:\users\star5\documents\project\testing\testing\main.cpp
+1467370116 source:c:\users\star5\documents\project\testing\testing\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<sstream>
 	"gameboard.h"
-	"nave.h"
-	"Asteroid_Belt.h"
-	<iostream>
-	<sstream>
-	<list>
-	<SDL_mixer.h>
 
 1467347379 c:\users\star5\documents\project\testing\testing\nave.h
 	<SDL.h>
@@ -395,10 +391,15 @@
 1466881579 source:c:\users\star5\documents\project\testing\testing\asteroid_belt.cpp
 	"Asteroid_Belt.h"
 
-1466875780 c:\users\star5\documents\project\testing\testing\asteroid_belt.h
+1467366224 c:\users\star5\documents\project\testing\testing\asteroid_belt.h
 	"meteors.h"
 	<list>
 	<SDL.h>
 	"nave.h"
 	"arma.h"
+
+1454362934 c:\users\star5\documents\project\testing\deps\include\sdl\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
 

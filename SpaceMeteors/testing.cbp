@@ -21,6 +21,7 @@
 					<Add library="libSDL2" />
 					<Add library="libSDL2_image" />
 					<Add library="libSDL2_mixer" />
+					<Add library="SDL2_ttf" />
 					<Add directory="../deps/lib" />
 				</Linker>
 			</Target>
@@ -42,6 +43,7 @@
 		</Compiler>
 		<Unit filename="Asteroid_Belt.cpp" />
 		<Unit filename="Asteroid_Belt.h" />
+		<Unit filename="Music_Sounds.h" />
 		<Unit filename="PICT.JPG" />
 		<Unit filename="SDL_Create.cpp" />
 		<Unit filename="SDL_Create.h" />

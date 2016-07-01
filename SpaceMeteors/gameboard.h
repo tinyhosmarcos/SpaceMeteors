@@ -3,6 +3,10 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_mixer.h>
+#include <SDL_ttf.h>
+#include <sstream>
+
+using namespace std;
 class gameboard{
 private:
     SDL_Window *windows;
@@ -12,10 +16,13 @@ private:
     SDL_Texture* texture;
     SDL_Texture* texture2;
     Mix_Music *music;
+    const char* file_nave;
 
     //
 public:
     gameboard();
+    void Main_Game();
+    void Main_Space();
     void Init_Video();
     void Init_Image();
     void Create_Windows();
@@ -25,6 +32,8 @@ public:
     SDL_Texture* Get_Texture(){return texture;}
     SDL_Texture* Get_Texture_2(){return texture2;}
     Mix_Music *Get_Music(){return music;};
+    const char* Get_Nave(){return file_nave;};
+    //void Init_Game();
 
 };
 
