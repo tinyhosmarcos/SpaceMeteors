@@ -4,9 +4,12 @@ gameboard::gameboard(){
     Init_Image();
     Create_Windows();
     Create_Map();
+    Mix_OpenAudio(44100,MIX_DEFAULT_FORMAT,2,2048);
+    Mix_Music *musica=Mix_LoadMUS("beat.wav");
+    Mix_PlayMusic(musica,-1);
 };
 void gameboard::Init_Video(){
-    SDL_Init(SDL_INIT_VIDEO);
+    SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO);
 
 
 }

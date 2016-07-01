@@ -28,6 +28,7 @@ SDL_Rect* nave::movement(){
 }
 void nave::shoot(SDL_Renderer* renderer){
     Weapon.push_back(new Weapons(renderer,(this->position_x)+20,(this->position_y)-60));
+
 }
 void nave::shots_impact(SDL_Renderer* renderer){
     int coord_temp;
@@ -45,9 +46,50 @@ void nave::shots_impact(SDL_Renderer* renderer){
 
     }
 }
-/*
-void nave::delete_shoot(list<Weapon*>::iterator &temp_num_shoot){
-    delete(*temp_num_shoot);
-    temp_num_shoot=Weapon.erase(temp_num_shoot);
+
+void nave::delete_shoot(int temp_num_shoot){
+    for(num_shoot=Weapon.begin();num_shoot!=Weapon.end();++num_shoot){
+        if(temp_num_shoot==0){
+             delete(*num_shoot);
+             num_shoot=Weapon.erase(num_shoot);
+             break;
+        }
+        temp_num_shoot--;
+    }
+
+
 }
-*/
+void nave::controler(SDL_Event event,SDL_Renderer *render){
+    SDL_PollEvent(&event);
+        if(state[SDL_SCANCODE_1]){
+
+        }
+        if (state[SDL_SCANCODE_UP]) {
+            Set_position('y',Get_position('y')-1);
+
+        }
+         if (state[SDL_SCANCODE_DOWN]) {
+            Set_position('y',Get_position('y')+1);
+        }
+         if (state[SDL_SCANCODE_LEFT]) {
+            Set_position('x',Get_position('x')-1);
+        }
+         if (state[SDL_SCANCODE_RIGHT]) {
+            Set_position('x',Get_position('x')+1);
+        }
+         //if (state[SDL_SCANCODE_A]) {
+           // space.shoot(board.Get_Renderer());
+        //}
+
+
+       switch (event.type){
+            case SDL_KEYDOWN:
+                switch (event.key.keysym.sym){
+                        //case SDLK_LEFT:  space.Set_position('x',space.Get_position('x')-1); break;
+                        //case SDLK_RIGHT: space.Set_position('x',space.Get_position('x')+1); break;
+                        //case SDLK_UP:    space.Set_position('y',space.Get_position('y')-1); break;
+                        //case SDLK_DOWN:  space.Set_position('y',space.Get_position('y')+1); break;
+                        case SDLK_a:     shoot(render); break;
+                }
+        }
+}

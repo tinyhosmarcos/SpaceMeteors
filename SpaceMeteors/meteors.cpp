@@ -1,6 +1,7 @@
 #include "meteors.h"
 meteors::meteors(const char* temp_file,SDL_Renderer* temp_renderer){
     Set_Image(temp_file);
+    Set_Sound(sound);
     Create_Texture(temp_renderer);
     proportions(50,55);
     Set_position('x',589);
@@ -27,13 +28,16 @@ void meteors::movimiento(){
 bool meteors::crash_shoots(nave &test_n){
     list<Weapons*> temp_arma=test_n.Get_shoot();
     list<Weapons*>::iterator temp_shoot;
+    int contador_shots=0;
     for(temp_shoot=temp_arma.begin();temp_shoot!=temp_arma.end();temp_shoot++){
+        contador_shots++;
         if( ((this->position_x + this->width) > (*temp_shoot)->Get_position('x'))
         &&((this->position_y + this->length) > (*temp_shoot)->Get_position('y'))
         && (((*temp_shoot)->Get_position('x') + (*temp_shoot)->Get_position('h')) > this->position_x)
         && (((*temp_shoot)->Get_position('y') + (*temp_shoot)->Get_position('w')) > this->position_y)){
-
-        return true;
+            test_n.delete_shoot(contador_shots-1);
+            Mix_PlayChannel( -1, Get_Sound(), 0 );
+            return true;
         }
     }
     return false;
@@ -46,6 +50,8 @@ bool meteors::crash_nave(nave &test_n){
         &&((this->position_y + this->length) > test_n.Get_position('y'))
         && ((test_n.Get_position('x') + test_n.Get_position('h')) > this->position_x)
         && ((test_n.Get_position('y') + test_n.Get_position('w')) > this->position_y)){
+        test_n.die();
+        Mix_PlayChannel( -1, Get_Sound(), 0 );
         return true;
         }
     return false;

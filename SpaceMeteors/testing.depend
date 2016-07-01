@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1466817060 source:c:\users\star5\documents\project\testing\testing\arma.cpp
+1467344578 source:c:\users\star5\documents\project\testing\testing\arma.cpp
 	"arma.h"
 
-1466774804 source:c:\users\star5\documents\project\testing\testing\gameboard.cpp
+1467347514 source:c:\users\star5\documents\project\testing\testing\gameboard.cpp
 	"gameboard.h"
 
-1466563710 c:\users\star5\documents\project\testing\testing\gameboard.h
+1467347580 c:\users\star5\documents\project\testing\testing\gameboard.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
@@ -344,7 +344,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1466876791 source:c:\users\star5\documents\project\testing\testing\main.cpp
+1467347212 source:c:\users\star5\documents\project\testing\testing\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<sstream>
@@ -354,15 +354,16 @@
 	<iostream>
 	<sstream>
 	<list>
+	<SDL_mixer.h>
 
-1466882104 c:\users\star5\documents\project\testing\testing\nave.h
+1467347379 c:\users\star5\documents\project\testing\testing\nave.h
 	<SDL.h>
 	<SDL_image.h>
 	"gameboard.h"
 	"arma.h"
 	<list>
 
-1466880966 c:\users\star5\documents\project\testing\testing\meteors.h
+1467345053 c:\users\star5\documents\project\testing\testing\meteors.h
 	<SDL.h>
 	<SDL_image.h>
 	"SDL_Create.h"
@@ -372,22 +373,24 @@
 	"arma.h"
 	<iostream>
 
-1466800697 c:\users\star5\documents\project\testing\testing\sdl_create.h
+1467344579 c:\users\star5\documents\project\testing\testing\sdl_create.h
 	<SDL.h>
 	<SDL_image.h>
+	<SDL_mixer.h>
 
-1466883785 source:c:\users\star5\documents\project\testing\testing\meteors.cpp
+1467345104 source:c:\users\star5\documents\project\testing\testing\meteors.cpp
 	"meteors.h"
 
-1466882104 source:c:\users\star5\documents\project\testing\testing\nave.cpp
+1467347360 source:c:\users\star5\documents\project\testing\testing\nave.cpp
 	"nave.h"
 
-1466864437 source:c:\users\star5\documents\project\testing\testing\sdl_create.cpp
+1467344601 source:c:\users\star5\documents\project\testing\testing\sdl_create.cpp
 	"SDL_Create.h"
 
-1466800697 c:\users\star5\documents\project\testing\testing\arma.h
+1467344579 c:\users\star5\documents\project\testing\testing\arma.h
 	<SDL.h>
 	"SDL_Create.h"
+	<SDL_mixer.h>
 
 1466881579 source:c:\users\star5\documents\project\testing\testing\asteroid_belt.cpp
 	"Asteroid_Belt.h"

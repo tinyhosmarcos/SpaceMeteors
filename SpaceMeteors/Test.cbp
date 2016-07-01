@@ -21,6 +21,7 @@
 					<Add library="libSDL2" />
 					<Add library="libSDL2_image" />
 					<Add library="libSDL2_mixer" />
+					<Add library="libSDL2_ttf" />
 					<Add directory="../deps/lib" />
 				</Linker>
 			</Target>

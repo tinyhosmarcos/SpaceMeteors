@@ -11,6 +11,7 @@
 class meteors:public SDL_Create{
 private:
     int velocidad;
+    const char* sound="crash.wav";
 public:
     meteors(){velocidad=0;};
     meteors(const char* temp_file,SDL_Renderer* temp_renderer);

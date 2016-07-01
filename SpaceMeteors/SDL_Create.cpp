@@ -3,6 +3,9 @@
 void SDL_Create::Set_Image(const char* file){
     image=IMG_Load(file);
 }
+void SDL_Create::Set_Sound(const char* file){
+    sound_effect=Mix_LoadWAV(file);
+}
 void SDL_Create::Create_Texture(SDL_Renderer* renderer){
     texture=SDL_CreateTextureFromSurface(renderer,image);
 }

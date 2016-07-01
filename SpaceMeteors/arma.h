@@ -6,7 +6,7 @@
 class Weapons:public SDL_Create{
 private:
     const char* file="bullet.png";
-    Mix_Chunk *sound=Mix_LoadWAV("shoot.wav");
+    const char* sound="shoot.wav";
 public:
     Weapons(SDL_Renderer* temp_renderer,int post_x,int post_y);
     void init_movement();

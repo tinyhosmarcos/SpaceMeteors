@@ -11,6 +11,9 @@ private:
     SDL_Surface* image2;
     SDL_Texture* texture;
     SDL_Texture* texture2;
+    Mix_Music *music;
+
+    //
 public:
     gameboard();
     void Init_Video();
@@ -21,6 +24,7 @@ public:
     SDL_Renderer* Get_Renderer(){return renderer;}
     SDL_Texture* Get_Texture(){return texture;}
     SDL_Texture* Get_Texture_2(){return texture2;}
+    Mix_Music *Get_Music(){return music;};
 
 };
 

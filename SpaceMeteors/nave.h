@@ -15,6 +15,8 @@ private:
     SDL_Rect var_mov;
     list<Weapons*> Weapon;
     list<Weapons*>::iterator num_shoot;
+    int lifes=5;
+    const Uint8 *state = SDL_GetKeyboardState(NULL);
 
 
 public:
@@ -28,6 +30,9 @@ public:
     void shoot(SDL_Renderer* renderer);
     void shots_impact(SDL_Renderer* renderer);
     list<Weapons*> Get_shoot(){return Weapon;};
+    void delete_shoot(int temp_num_shoot);
+    void die(){lifes--;};
+    void controler(SDL_Event event,SDL_Renderer* render);
 };
 
 #endif // NAVE_H_INCLUDED
